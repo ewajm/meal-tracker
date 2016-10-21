@@ -23,8 +23,9 @@ import { Fud } from './fud.model';
 
 export class NewFudComponent {
   @Output() newFudSender = new EventEmitter();
-  saveFud(name: string, calories: number, details: string){
-    var newFudToAdd: Fud = new Fud(name, calories, details);
+  saveFud(name: string, calories: string, details: string){
+    var caloriesNum: number = parseInt(calories);
+    var newFudToAdd: Fud = new Fud(name, caloriesNum, details);
     this.newFudSender.emit(newFudToAdd);
   }
 }
