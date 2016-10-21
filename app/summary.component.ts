@@ -9,9 +9,9 @@ import { Fud } from './fud.model';
   <div class="worse">
     <h4>Could Be Worse Meter: </h4>
     <p>Everything you have eaten today is still fewer calories than: </p>
-    <div class="row" *ngFor="let fud of summaryFudList | total | worse">
-      <div class="col-sm-10">{{fud.name}}</div>
-      <div class="col-sm-2">{{fud.calories}}</div>
+    <div class="food-row" *ngFor="let fud of summaryFudList | total | worse">
+      <p>{{fud.name}}<p>
+      <p>Calories: {{fud.calories}}<p>
     </div>
   </div>
   `

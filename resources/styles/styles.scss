@@ -23,6 +23,7 @@ body {
     color: $peachOrange;
     text-align: center;
     margin-top: 0px;
+    font-family: 'Spicy Rice', cursive;
   }
 }
 
@@ -30,6 +31,11 @@ h3 {
   text-align: center;
   color: $tuscanRed;
   margin-top: 0px;
+  font-family: 'Spicy Rice', cursive;
+}
+
+h4 {
+  font-family: 'Spicy Rice', cursive;
 }
 
 .form-horizontal {
@@ -44,11 +50,14 @@ h3 {
 }
 
 .food, .worse {
-  background-color: $tuscanRed;
+  background-color: $lightRedOchre;
   margin: 1rem;
   padding: 1rem;
   border-radius: 5px;
   font-size: large;
+  -webkit-box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
+  box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
 }
 
 .form-horizontal, .summary, .list {
@@ -64,4 +73,16 @@ h3 {
 
 select {
   margin-left: 1rem;
+}
+
+.food-row {
+  font-size: medium;
+  font-weight: bold;
+  font-color: $tuscanRed;
+  text-align: center;
+  border: solid 2px $veryPaleYellow;
+  border-radius: 5px;
+  p {
+    margin: .5rem;
+  }
 }
