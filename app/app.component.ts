@@ -19,10 +19,19 @@ import { Fud } from './fud.model';
         ></edit-fud>
       </div>
     </div>
-    <fud-list
-      [childFudList] = "masterFudList"
-      (editFudSender) = "sendToEdit($event)"
-    ></fud-list>
+    <div class="row">
+      <div class="col-sm-8">
+        <fud-list
+          [childFudList] = "masterFudList"
+          (editFudSender) = "sendToEdit($event)"
+        ></fud-list>
+      </div>
+      <div class="col-sm-4">
+        <summary-display
+          [summaryFudList] = "masterFudList"
+        ></summary-display>
+      </div>
+    </div>
   </div>
   `
 })
@@ -30,13 +39,6 @@ import { Fud } from './fud.model';
 export class AppComponent {
   public masterFudList: Fud[] = [
     new Fud("burger", 900, "no bun")
-  ];
-  public terribleFudList: Fud[] = [
-    new Fud("IHOP Chorizo Fiest Omelette", 1990, "Comes with 3 pancakes - Yikes!"),
-    new Fud("Cheesecake Factory Warm Apple Crisp", 1740, "More calories than the actual cheesecakes!"),
-    new Fud("Steak 'n Shake 7x7 Steakburger 'n Fries", 2290, "Seven patties! SEVEN!!"),
-    new Fud("Dickey’s Barbecue Pit 3 Meat Plate", 3816, "Three meets, 2 sides, and ice cream"),
-    new Fud("Outback Steakhouse Herb Prime Rib", 2404, "What kind of herbs are they even using?")
   ];
   addFud(newFudFromChild: Fud) {
     this.masterFudList.push(newFudFromChild);

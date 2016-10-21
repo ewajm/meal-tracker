@@ -7,7 +7,7 @@ import { Fud } from './fud.model';
 })
 
 export class CaloriesPipe implements PipeTransform {
-  transform(input: Fud[], desiredCalories){
+  transform(input: Fud[], desiredCalories: string){
     if(desiredCalories === "high"){
       return input.filter(function(fud){
         return fud.calories > 500;
