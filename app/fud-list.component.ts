@@ -7,7 +7,7 @@ import { Fud } from './fud.model';
   selector: 'fud-list',
   template: `
     <h3 *ngIf="childFudList.length > 0">Food List!</h3>
-    <select (change)="onChange($event.target.value)">
+    <select *ngIf="childFudList.length > 0" (change)="onChange($event.target.value)">
       <option value="all">Show all</option>
       <option value="high">Show only high calorie foods</option>
       <option value="low">Show only low calories foods</option>

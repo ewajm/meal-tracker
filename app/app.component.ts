@@ -42,9 +42,7 @@ import { EditService } from './edit.service'
 })
 
 export class AppComponent implements OnInit{
-  public masterFudList: Fud[] = [
-    new Fud("burger", 900, "no bun")
-  ];
+  public masterFudList: Fud[] = [];
   public fudToEdit: Fud = null;
   constructor(private editService: EditService){}
 
