@@ -6,17 +6,19 @@ import { Fud } from './fud.model';
   selector: 'fud-display',
   template: `
     <div class="row">
-      <div class="col-sm-4">
-      <p>{{fud.name}}</p>
+      <div class="col-md-4 col-sm-6">
+        <p>{{fud.name}}</p>
       </div>
-      <div class="col-sm-4">
-      <p>{{fud.details}}</p>
+      <div class="col-md-4 col-sm-6">
+        <p>{{fud.details}}</p>
       </div>
-      <div class="col-sm-4">
-      <p>{{fud.calories}}</p>
+      <div class="col-md-2 col-sm-6">
+        <p>{{fud.calories}}</p>
+      </div>
+      <div class="col-md-2 col-sm-6">
+        <button class="btn btn-warning btn-sm center-block" (click)="passUpFud(fud)">Edit Food</button>
       </div>
     </div>
-    <button class="btn btn-warning center-block" (click)="passUpFud(fud)">Edit Food</button>
   `
 })
 

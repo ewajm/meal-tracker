@@ -8,7 +8,8 @@ import { EditService } from './edit.service'
   template:`
   <div class="container">
     <div class = "jumbotron">
-      <h1>You're Doing Great!</h1>
+      <h1>You're Doing Great</h1>
+      <h3>A Non-Judgemental Meal-Tracker</h3>
       <div class="form-horizontal">
         <new-fud *ngIf="!fudToEdit"
           (newFudSender) = "addFud($event)"
@@ -20,14 +21,14 @@ import { EditService } from './edit.service'
       </div>
     </div>
     <div class="row">
-      <div class="col-sm-8">
+      <div class="col-md-8">
         <div class="list">
           <fud-list
             [childFudList] = "masterFudList"
           ></fud-list>
         </div>
       </div>
-      <div class="col-sm-4">
+      <div class="col-md-4">
         <div class="summary">
           <summary-display
             [summaryFudList] = "masterFudList"

@@ -25,6 +25,9 @@ body {
     margin-top: 0px;
     font-family: 'Spicy Rice', cursive;
   }
+  h3 {
+    color: $peachOrange;
+  }
 }
 
 h3 {
@@ -38,20 +41,9 @@ h4 {
   font-family: 'Spicy Rice', cursive;
 }
 
-.form-horizontal {
-  .row{
-    display: flex;
-    flex-wrap: wrap;
-  }
-  .row .col-sm-3 {
-    display: flex;
-    align-items: center;
-  }
-}
-
 .food, .worse {
   background-color: $lightRedOchre;
-  margin: 1rem;
+  margin: 1rem .5rem;
   padding: 1rem;
   border-radius: 5px;
   font-size: large;
@@ -82,7 +74,38 @@ select {
   text-align: center;
   border: solid 2px $veryPaleYellow;
   border-radius: 5px;
+  margin-bottom: 1rem;
   p {
     margin: .5rem;
+  }
+}
+
+.food .row {
+  text-align: center;
+}
+
+/* Using plain CSS */
+@media (min-width: 992px) {
+  .food .row {
+    display: flex;
+    flex-wrap: wrap;
+    > [class*='col-']{
+      display: flex;
+      align-items: center;
+      text-align: left;
+      p {
+        margin-bottom: 0px;
+      }
+    }
+  }
+  .form-horizontal {
+    .row{
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .row .col-md-3 {
+      display: flex;
+      align-items: center;
+    }
   }
 }

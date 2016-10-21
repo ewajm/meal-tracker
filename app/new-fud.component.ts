@@ -5,7 +5,7 @@ import { Fud } from './fud.model';
   selector: 'new-fud',
   template: `
   <div class="row">
-    <div class="col-sm-9">
+    <div class="col-md-9">
       <div class="form-group">
         <label class="col-sm-2">Food Name: </label>
         <div class="col-sm-10">
@@ -25,7 +25,7 @@ import { Fud } from './fud.model';
         </div>
       </div>
     </div>
-    <div class="col-sm-3">
+    <div class="col-md-3">
           <button class="btn btn-success btn-lg center-block" (click)="saveFud(newName.value, newCalories.value, newDetails.value); newName.value=''; newCalories.value=''; newDetails.value=''">Log Food!</button>
     </div>
   </div>
