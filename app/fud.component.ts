@@ -1,4 +1,5 @@
 import { Component, Input, EventEmitter } from '@angular/core';
+import { EditService } from './edit.service';
 import { Fud } from './fud.model';
 
 @Component ({
@@ -15,9 +16,15 @@ import { Fud } from './fud.model';
       <p>{{fud.calories}}</p>
       </div>
     </div>
+    <button class="btn btn-warning center-block" (click)="passUpFud(fud)">Edit Food</button>
   `
 })
 
 export class FudDisplayComponent {
   @Input() fud: Fud;
+
+  constructor(private editService: EditService){}
+  passUpFud(fudtoEdit){
+    this.editService.setEdit(fudtoEdit);
+  }
 }

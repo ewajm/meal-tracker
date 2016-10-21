@@ -17,7 +17,6 @@ import { Fud } from './fud.model';
       <fud-display
         [fud]="currentFud"
       ></fud-display>
-      <button class="btn btn-warning center-block" (click)="passUpFud(currentFud)">Edit Food</button>
     </div>
   `
 })
@@ -26,9 +25,6 @@ export class FudListComponent {
   @Input() childFudList: Fud[];
   @Output() editFudSender = new EventEmitter();
   public calorieFilter: string = "all";
-  passUpFud(fudtoEdit){
-    this.editFudSender.emit(fudtoEdit);
-  }
   onChange(option){
     this.calorieFilter = option;
   }

@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import { ViewChild } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Fud } from './fud.model';
+import { EditService } from './edit.service'
 
 @Component({
   selector: 'my-app',
@@ -22,7 +24,6 @@ import { Fud } from './fud.model';
         <div class="list">
           <fud-list
             [childFudList] = "masterFudList"
-            (editFudSender) = "sendToEdit($event)"
           ></fud-list>
         </div>
       </div>
@@ -35,17 +36,26 @@ import { Fud } from './fud.model';
       </div>
     </div>
   </div>
-  `
+  `,
+  providers: [EditService]
 })
 
-export class AppComponent {
+export class AppComponent implements OnInit{
   public masterFudList: Fud[] = [
     new Fud("burger", 900, "no bun")
   ];
+  public fudToEdit: Fud = null;
+  constructor(private editService: EditService){}
+
+  ngOnInit(){
+    this.editService.getEdit().subscribe((fud: Fud)=>{
+      this.fudToEdit = fud;
+    });
+  }
+
   addFud(newFudFromChild: Fud) {
     this.masterFudList.push(newFudFromChild);
   }
-  public fudToEdit: Fud = null;
   sendToEdit(sentFud){
     this.fudToEdit = sentFud;
   }
