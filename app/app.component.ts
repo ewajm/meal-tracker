@@ -7,13 +7,11 @@ import { Fud } from './fud.model';
   <div class="container">
     <div class = "jumbotron">
       <h1>You're Doing Great!</h1>
-      <div class="form" *ngIf="!fudToEdit">
-        <new-fud
+      <div class="form-horizontal">
+        <new-fud *ngIf="!fudToEdit"
           (newFudSender) = "addFud($event)"
         ></new-fud>
-      </div>
-      <div class="form" *ngIf="fudToEdit">
-        <edit-fud
+        <edit-fud *ngIf="fudToEdit"
           [childFudToEdit] = "fudToEdit"
           (editDoneSender) = "finishedEditing()"
         ></edit-fud>
@@ -21,15 +19,19 @@ import { Fud } from './fud.model';
     </div>
     <div class="row">
       <div class="col-sm-8">
-        <fud-list
-          [childFudList] = "masterFudList"
-          (editFudSender) = "sendToEdit($event)"
-        ></fud-list>
+        <div class="list">
+          <fud-list
+            [childFudList] = "masterFudList"
+            (editFudSender) = "sendToEdit($event)"
+          ></fud-list>
+        </div>
       </div>
       <div class="col-sm-4">
-        <summary-display
-          [summaryFudList] = "masterFudList"
-        ></summary-display>
+        <div class="summary">
+          <summary-display
+            [summaryFudList] = "masterFudList"
+          ></summary-display>
+        </div>
       </div>
     </div>
   </div>

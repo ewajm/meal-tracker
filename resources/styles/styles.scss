@@ -9,7 +9,7 @@ body {
 }
 
 .container {
-  background-color: rgba(236,115,87, .5);
+  background-color: rgba(117,79,68, .7);
   margin-top: 1rem;
   border-radius: 5px;
 }
@@ -17,12 +17,51 @@ body {
 .jumbotron {
   background-color: transparent;
   margin-top: 1rem;
+  margin-bottom: 0px;
+  padding: 2rem;
   h1 {
     color: $peachOrange;
     text-align: center;
+    margin-top: 0px;
   }
-  .form {
-    background-color: $peachOrange;
-    padding: 1rem;
+}
+
+h3 {
+  text-align: center;
+  color: $tuscanRed;
+  margin-top: 0px;
+}
+
+.form-horizontal {
+  .row{
+    display: flex;
+    flex-wrap: wrap;
   }
+  .row .col-sm-3 {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.food, .worse {
+  background-color: $tuscanRed;
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 5px;
+  font-size: large;
+}
+
+.form-horizontal, .summary, .list {
+  background-color: $straw;
+  border: solid 2px $lightRedOchre;
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 5px;
+  -webkit-box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
+  box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
+}
+
+select {
+  margin-left: 1rem;
 }

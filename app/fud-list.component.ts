@@ -13,11 +13,11 @@ import { Fud } from './fud.model';
       <option value="low">Show only low calories foods</option>
     </select>
       <h3 *ngIf="childFudList.length === 0">No Foods yet!</h3>
-    <div class="well" *ngFor="let currentFud of childFudList | calories: calorieFilter">
+    <div class="food" *ngFor="let currentFud of childFudList | calories: calorieFilter">
       <fud-display
         [fud]="currentFud"
       ></fud-display>
-      <button class="btn btn-warning" (click)="passUpFud(currentFud)">Edit Food</button>
+      <button class="btn btn-warning center-block" (click)="passUpFud(currentFud)">Edit Food</button>
     </div>
   `
 })

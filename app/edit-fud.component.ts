@@ -4,20 +4,31 @@ import { Fud } from './fud.model';
 @Component ({
   selector: 'edit-fud',
   template: `
-    <h3>Edit Food</h3>
-    <div class="form-group">
-      <label>Food Name: </label>
-      <input class="form-control" [(ngModel)]="childFudToEdit.name" required>
+  <div class="row">
+    <div class="col-sm-9">
+      <div class="form-group">
+        <label class="col-sm-2">Food Name: </label>
+        <div class="col-sm-10">
+          <input class="form-control" [(ngModel)]="childFudToEdit.name" required>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-sm-2">Calories: </label>
+        <div class="col-sm-10">
+          <input class="form-control" [(ngModel)]="childFudToEdit.calories" type="number">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-sm-2">Details: </label>
+        <div class="col-sm-10">
+          <input class="form-control"  [(ngModel)]="childFudToEdit.details">
+        </div>
+      </div>
     </div>
-    <div class="form-group">
-      <label>Calories: </label>
-      <input class="form-control" [(ngModel)]="childFudToEdit.calories" type="number">
+    <div class="col-sm-3">
+        <button class="btn btn-success btn-lg center-block" (click)="editDoneClicked()">Finish Editing!</button>
     </div>
-    <div class="form-group">
-      <label>Details (e.g. Didn't eat hamburger bun): </label>
-      <input class="form-control"  [(ngModel)]="childFudToEdit.details">
-    </div>
-    <button class="btn btn-success" (click)="editDoneClicked()">Finish Editing!</button>
+  </div>
   `
 })
 

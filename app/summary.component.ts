@@ -6,7 +6,7 @@ import { Fud } from './fud.model';
   template: `
   <h3>Total Calories: {{ summaryFudList | total }}</h3>
   <h3>Average Calories/Food: {{ summaryFudList | total | average: summaryFudList.length }}</h3>
-  <div>
+  <div class="worse">
     <h4>Could Be Worse Meter: </h4>
     <p>Everything you have eaten today is still fewer calories than: </p>
     <div class="row" *ngFor="let fud of summaryFudList | total | worse">

@@ -4,19 +4,31 @@ import { Fud } from './fud.model';
 @Component ({
   selector: 'new-fud',
   template: `
-    <div class="form-group">
-      <label>Food Name: </label>
-      <input class="form-control" #newName required>
+  <div class="row">
+    <div class="col-sm-9">
+      <div class="form-group">
+        <label class="col-sm-2">Food Name: </label>
+        <div class="col-sm-10">
+          <input class="form-control" #newName required>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-sm-2">Calories: </label>
+        <div class="col-sm-10">
+          <input class="form-control" #newCalories type="number">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-sm-2">Details: </label>
+        <div class="col-sm-10">
+          <input class="form-control" #newDetails placeholder="e.g. Didn't eat hamburger bun">
+        </div>
+      </div>
     </div>
-    <div class="form-group">
-      <label>Calories: </label>
-      <input class="form-control" #newCalories type="number">
+    <div class="col-sm-3">
+          <button class="btn btn-success btn-lg center-block" (click)="saveFud(newName.value, newCalories.value, newDetails.value); newName.value=''; newCalories.value=''; newDetails.value=''">Log Food!</button>
     </div>
-    <div class="form-group">
-      <label>Details (e.g. Didn't eat hamburger bun): </label>
-      <input class="form-control" #newDetails>
-    </div>
-    <button class="btn btn-success" (click)="saveFud(newName.value, newCalories.value, newDetails.value); newName.value=''; newCalories.value=''; newDetails.value=''">Log Food!</button>
+  </div>
   `
 })
 
