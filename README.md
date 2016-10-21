@@ -4,7 +4,17 @@
 
 ## Description
 
-_Your Eating Habits Are Bad And You Should Feel Bad, a meal-tracker in Angular 2_
+_You're Doing Great!, a meal-tracker in Angular 2_
+
+## Specs
+* I want to log a food I have eaten by submitting a form with food name, calories and details.
+* I want to view a list of foods I have logged.
+* I want options to view all foods, only high-calorie foods (more than 500 calories), or only lower-calorie foods (less than 500 calories).
+* I want to click a food to edit its name, details or calories (in case I decide to pretend my fries were 100 calories instead of 365).
+* I want to be able to save the date the food was eaten
+* I want to see the total/average calories I have eaten in a day
+* I want to be able to log multiple days of food and see the foods grouped by day
+* I want to see the overall daily average of the food I consume so I can figure out how much exercise I should be getting
 
 ## Setup/Installation Requirements
 
