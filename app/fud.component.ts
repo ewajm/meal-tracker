@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, EventEmitter } from '@angular/core';
 import { Fud } from './fud.model';
 
 @Component ({
@@ -12,7 +12,7 @@ import { Fud } from './fud.model';
         <h3>{{fud.calories}}</h3>
       </div>
     </div>
-    <div>
+    <div class="row">
       <p>{{fud.details}}</p>
     </div>
   `

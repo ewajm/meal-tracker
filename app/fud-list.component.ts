@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter} from '@angular/core';
 import { Fud } from './fud.model';
 
 @Component ({
@@ -10,10 +10,15 @@ import { Fud } from './fud.model';
       <fud-display
         [fud]="currentFud"
       ></fud-display>
+      <button class="btn btn-warning" (click)="passUpFud(currentFud)">Edit Food</button>
     </div>
   `
 })
 
 export class FudListComponent {
   @Input() childFudList: Fud[];
+  @Output() editFudSender = new EventEmitter();
+  passUpFud(fudtoEdit){
+    this.editFudSender.emit(fudtoEdit);
+  }
 }

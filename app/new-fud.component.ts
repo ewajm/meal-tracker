@@ -17,14 +17,13 @@ import { Fud } from './fud.model';
       <label>Details (e.g. Didn't eat hamburger bun): </label>
       <input class="form-control" #newDetails>
     </div>
-    <button class="btn btn-success" (click)="saveFud(newName.value, newCalories.value, newDetails.value)">Log Food!</button>
+    <button class="btn btn-success" (click)="saveFud(newName.value, newCalories.value, newDetails.value); newName.value=''; newCalories.value=''; newDetails.value=''">Log Food!</button>
   `
 })
 
 export class NewFudComponent {
   @Output() newFudSender = new EventEmitter();
   saveFud(name: string, calories: number, details: string){
-    console.log(isNaN(calories));
     var newFudToAdd: Fud = new Fud(name, calories, details);
     this.newFudSender.emit(newFudToAdd);
   }
