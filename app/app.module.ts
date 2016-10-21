@@ -9,6 +9,7 @@ import { EditFudComponent } from './edit-fud.component';
 import { CaloriesPipe } from './calories.pipe';
 import { TotalPipe } from './total.pipe';
 import { AveragePipe } from './average.pipe';
+import { WorsePipe } from './worse.pipe';
 import { SummaryDisplay } from './summary.component';
 
 @NgModule({
@@ -25,7 +26,8 @@ import { SummaryDisplay } from './summary.component';
     CaloriesPipe,
     TotalPipe,
     AveragePipe,
-    SummaryDisplay
+    SummaryDisplay,
+    WorsePipe
    ],
   bootstrap:    [ AppComponent ]
 })

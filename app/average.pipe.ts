@@ -1,5 +1,4 @@
 import { Pipe, PipeTransform} from '@angular/core';
-import { Fud } from './fud.model';
 
 @Pipe ({
   name:"average",
