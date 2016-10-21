@@ -10,7 +10,7 @@ import { CaloriesPipe } from './calories.pipe';
 import { TotalPipe } from './total.pipe';
 import { AveragePipe } from './average.pipe';
 import { WorsePipe } from './worse.pipe';
-import { SummaryDisplay } from './summary.component';
+import { SummaryDisplayComponent } from './summary.component';
 
 @NgModule({
   imports: [
@@ -26,7 +26,7 @@ import { SummaryDisplay } from './summary.component';
     CaloriesPipe,
     TotalPipe,
     AveragePipe,
-    SummaryDisplay,
+    SummaryDisplayComponent,
     WorsePipe
    ],
   bootstrap:    [ AppComponent ]

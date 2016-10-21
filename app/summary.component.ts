@@ -17,6 +17,6 @@ import { Fud } from './fud.model';
   `
 })
 
-export class SummaryDisplay {
+export class SummaryDisplayComponent {
   @Input() summaryFudList: Fud[];
 }
