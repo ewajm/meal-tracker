@@ -1,0 +1,28 @@
+$straw: #e1ce7a;
+$veryPaleYellow: #FBFFB9;
+$peachOrange: #FDD692;
+$lightRedOchre: #EC7357;
+$tuscanRed: #754f44;
+
+body {
+  background-image: url(../../resources/images/bg2.jpg);
+}
+
+.container {
+  background-color: rgba(236,115,87, .5);
+  margin-top: 1rem;
+  border-radius: 5px;
+}
+
+.jumbotron {
+  background-color: transparent;
+  margin-top: 1rem;
+  h1 {
+    color: $peachOrange;
+    text-align: center;
+  }
+  .form {
+    background-color: $peachOrange;
+    padding: 1rem;
+  }
+}

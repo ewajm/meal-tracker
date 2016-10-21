@@ -7,12 +7,12 @@ import { Fud } from './fud.model';
   <div class="container">
     <div class = "jumbotron">
       <h1>You're Doing Great!</h1>
-      <div *ngIf="!fudToEdit">
+      <div class="form" *ngIf="!fudToEdit">
         <new-fud
           (newFudSender) = "addFud($event)"
         ></new-fud>
       </div>
-      <div *ngIf="fudToEdit">
+      <div class="form" *ngIf="fudToEdit">
         <edit-fud
           [childFudToEdit] = "fudToEdit"
           (editDoneSender) = "finishedEditing()"

@@ -4,7 +4,6 @@ import { Fud } from './fud.model';
 @Component ({
   selector: 'new-fud',
   template: `
-    <h3>Log A Food</h3>
     <div class="form-group">
       <label>Food Name: </label>
       <input class="form-control" #newName required>
